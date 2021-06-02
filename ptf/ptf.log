@@ -1,0 +1,333 @@
+11:14:42.687  root      : INFO    : ++++++++ Tue Apr  6 11:14:42 2021 ++++++++
+11:14:42.748  scapy.runtime: WARNING : No route found for IPv6 destination :: (no default route?)
+11:14:42.759  root      : WARNING : VXLAN support not found in Scapy
+11:14:42.760  root      : WARNING : ERSPAN support not found in Scapy
+11:14:42.760  root      : INFO    : GENEVE support found in Scapy
+11:14:42.760  root      : INFO    : MPLS support found in Scapy
+11:14:42.760  root      : WARNING : NVGRE support not found in Scapy
+11:14:42.761  root      : INFO    : IGMP support found in Scapy
+11:14:42.768  root      : DEBUG   : Parsed test parameters:
+11:14:42.768  root      : DEBUG   : 	*p4info=/p4c-out/p4info.txt
+11:14:42.768  root      : DEBUG   : 	*cpu_port=255
+11:14:42.768  root      : DEBUG   : 	*grpcaddr=localhost:28000
+11:14:42.768  root      : DEBUG   : 	*device_id=1
+11:14:42.768  root      : DEBUG   : If something is missing, make sure you used the correct syntax: --test-params="[k=v;]*k=v"
+11:14:42.800  root      : INFO    : Importing platform: eth
+11:14:42.800  root      : DEBUG   : Configuration: {'xunit_dir': 'xunit', 'disable_ipv6': False, 'minsize': 0, 'list_test_names': False, 'test_file': None, 'test_spec': '', 'allow_user': False, 'test_order_seed': 2746, 'default_negative_timeout': 0.1, 'platform': 'eth', 'log_dir': None, 'xunit': False, 'disable_erspan': False, 'device_sockets': [], 'disable_geneve': False, 'socket_recv_size': 4096, 'profile': False, 'default_timeout': 2.0, 'platform_args': None, 'relax': False, 'random_seed': None, 'interfaces': [(0, 1, 'veth1'), (0, 2, 'veth3'), (0, 3, 'veth5'), (0, 4, 'veth7'), (0, 5, 'veth9'), (0, 6, 'veth11'), (0, 7, 'veth13'), (0, 8, 'veth15')], 'test_case_timeout': None, 'port_map': {(0, 1): 'veth1', (0, 7): 'veth13', (0, 6): 'veth11', (0, 5): 'veth9', (0, 4): 'veth7', (0, 3): 'veth5', (0, 8): 'veth15', (0, 2): 'veth3'}, 'disable_vxlan': False, 'disable_nvgre': False, 'qlen': 100, 'test_order': 'default', 'profile_file': 'profile.out', 'fail_skipped': False, 'test_params': "p4info='/p4c-out/p4info.txt';grpcaddr='localhost:28000';device_id='1';cpu_port='255'", 'test_dir': './tests', 'list': False, 'platform_dir': '/usr/local/lib/python2.7/dist-packages/ptf/platforms', 'disable_igmp': False, 'disable_mpls': False, 'debug': 'verbose', 'log_file': 'ptf.log', 'failfast': False}
+11:14:42.800  root      : INFO    : port map: {(0, 1): 'veth1', (0, 7): 'veth13', (0, 6): 'veth11', (0, 5): 'veth9', (0, 4): 'veth7', (0, 3): 'veth5', (0, 8): 'veth15', (0, 2): 'veth3'}
+11:14:42.800  root      : INFO    : Autogen random seed: 67933299
+11:14:42.802  root      : INFO    : *** TEST RUN START: Tue Apr  6 11:14:42 2021
+11:14:42.802  root      : INFO    : ** START TEST CASE bridging.ArpNdpRequestWithCloneTest
+11:14:42.838  dataplane : DEBUG   : Sending 60 bytes to device 0, port 1
+11:14:42.844  dataplane : DEBUG   : Pkt len 60 in on device 0, port 2
+11:14:42.845  dataplane : DEBUG   : Pkt len 60 in on device 0, port 3
+11:14:42.873  root      : DEBUG   : Checking for pkt on device 0, port 2
+11:14:42.873  dataplane : DEBUG   : Grabbing packet
+11:14:42.873  dataplane : DEBUG   : Checking packet from device 0, port 2
+11:14:42.874  root      : DEBUG   : Checking for pkt on device 0, port 3
+11:14:42.874  dataplane : DEBUG   : Grabbing packet
+11:14:42.874  dataplane : DEBUG   : Checking packet from device 0, port 3
+11:14:42.876  dataplane : DEBUG   : Sending 60 bytes to device 0, port 2
+11:14:42.879  dataplane : DEBUG   : Pkt len 60 in on device 0, port 1
+11:14:42.880  dataplane : DEBUG   : Pkt len 60 in on device 0, port 3
+11:14:42.895  root      : DEBUG   : Checking for pkt on device 0, port 1
+11:14:42.895  dataplane : DEBUG   : Grabbing packet
+11:14:42.896  dataplane : DEBUG   : Checking packet from device 0, port 1
+11:14:42.896  root      : DEBUG   : Checking for pkt on device 0, port 3
+11:14:42.896  dataplane : DEBUG   : Grabbing packet
+11:14:42.896  dataplane : DEBUG   : Checking packet from device 0, port 3
+11:14:42.897  dataplane : DEBUG   : Sending 60 bytes to device 0, port 3
+11:14:42.899  dataplane : DEBUG   : Pkt len 60 in on device 0, port 1
+11:14:42.900  dataplane : DEBUG   : Pkt len 60 in on device 0, port 2
+11:14:42.907  root      : DEBUG   : Checking for pkt on device 0, port 1
+11:14:42.907  dataplane : DEBUG   : Grabbing packet
+11:14:42.907  dataplane : DEBUG   : Checking packet from device 0, port 1
+11:14:42.908  root      : DEBUG   : Checking for pkt on device 0, port 2
+11:14:42.908  dataplane : DEBUG   : Grabbing packet
+11:14:42.908  dataplane : DEBUG   : Checking packet from device 0, port 2
+11:14:42.908  root      : DEBUG   : Checking for unexpected packets on all ports of device 0
+11:14:42.908  dataplane : DEBUG   : Grabbing packet
+11:14:42.908  dataplane : DEBUG   : Out of packets on all ports
+11:14:42.908  dataplane : DEBUG   : Did not find packet
+11:14:43.010  dataplane : DEBUG   : Poll timeout, no packet from device 0, port None
+11:14:43.018  dataplane : DEBUG   : Sending 86 bytes to device 0, port 1
+11:14:43.022  dataplane : DEBUG   : Pkt len 86 in on device 0, port 2
+11:14:43.022  dataplane : DEBUG   : Pkt len 86 in on device 0, port 3
+11:14:43.028  root      : DEBUG   : Checking for pkt on device 0, port 2
+11:14:43.028  dataplane : DEBUG   : Grabbing packet
+11:14:43.028  dataplane : DEBUG   : Checking packet from device 0, port 2
+11:14:43.030  root      : DEBUG   : Checking for pkt on device 0, port 3
+11:14:43.030  dataplane : DEBUG   : Grabbing packet
+11:14:43.030  dataplane : DEBUG   : Checking packet from device 0, port 3
+11:14:43.031  dataplane : DEBUG   : Sending 86 bytes to device 0, port 2
+11:14:43.034  dataplane : DEBUG   : Pkt len 86 in on device 0, port 1
+11:14:43.035  dataplane : DEBUG   : Pkt len 86 in on device 0, port 3
+11:14:43.063  root      : DEBUG   : Checking for pkt on device 0, port 1
+11:14:43.063  dataplane : DEBUG   : Grabbing packet
+11:14:43.063  dataplane : DEBUG   : Checking packet from device 0, port 1
+11:14:43.064  root      : DEBUG   : Checking for pkt on device 0, port 3
+11:14:43.064  dataplane : DEBUG   : Grabbing packet
+11:14:43.064  dataplane : DEBUG   : Checking packet from device 0, port 3
+11:14:43.065  dataplane : DEBUG   : Sending 86 bytes to device 0, port 3
+11:14:43.069  dataplane : DEBUG   : Pkt len 86 in on device 0, port 1
+11:14:43.069  dataplane : DEBUG   : Pkt len 86 in on device 0, port 2
+11:14:43.075  root      : DEBUG   : Checking for pkt on device 0, port 1
+11:14:43.075  dataplane : DEBUG   : Grabbing packet
+11:14:43.075  dataplane : DEBUG   : Checking packet from device 0, port 1
+11:14:43.076  root      : DEBUG   : Checking for pkt on device 0, port 2
+11:14:43.076  dataplane : DEBUG   : Grabbing packet
+11:14:43.076  dataplane : DEBUG   : Checking packet from device 0, port 2
+11:14:43.077  root      : DEBUG   : Checking for unexpected packets on all ports of device 0
+11:14:43.077  dataplane : DEBUG   : Grabbing packet
+11:14:43.077  dataplane : DEBUG   : Out of packets on all ports
+11:14:43.077  dataplane : DEBUG   : Did not find packet
+11:14:43.178  dataplane : DEBUG   : Poll timeout, no packet from device 0, port None
+11:14:43.187  root      : INFO    : ** END TEST CASE bridging.ArpNdpRequestWithCloneTest
+11:14:43.188  root      : INFO    : ** START TEST CASE bridging.ArpNdpReplyWithCloneTest
+11:14:43.188  root      : INFO    : ** START TEST CASE bridging.ArpNdpReplyWithCloneTest
+11:14:43.226  dataplane : DEBUG   : Sending 60 bytes to device 0, port 1
+11:14:43.226  dataplane : DEBUG   : Sending 60 bytes to device 0, port 1
+11:14:43.229  dataplane : DEBUG   : Pkt len 60 in on device 0, port 2
+11:14:43.229  dataplane : DEBUG   : Pkt len 60 in on device 0, port 2
+11:14:43.238  root      : DEBUG   : Checking for pkt on device 0, port 2
+11:14:43.238  root      : DEBUG   : Checking for pkt on device 0, port 2
+11:14:43.238  dataplane : DEBUG   : Grabbing packet
+11:14:43.238  dataplane : DEBUG   : Grabbing packet
+11:14:43.239  dataplane : DEBUG   : Checking packet from device 0, port 2
+11:14:43.239  dataplane : DEBUG   : Checking packet from device 0, port 2
+11:14:43.253  dataplane : DEBUG   : Sending 86 bytes to device 0, port 1
+11:14:43.253  dataplane : DEBUG   : Sending 86 bytes to device 0, port 1
+11:14:43.257  dataplane : DEBUG   : Pkt len 86 in on device 0, port 2
+11:14:43.257  dataplane : DEBUG   : Pkt len 86 in on device 0, port 2
+11:14:43.275  root      : DEBUG   : Checking for pkt on device 0, port 2
+11:14:43.275  root      : DEBUG   : Checking for pkt on device 0, port 2
+11:14:43.275  dataplane : DEBUG   : Grabbing packet
+11:14:43.275  dataplane : DEBUG   : Grabbing packet
+11:14:43.275  dataplane : DEBUG   : Checking packet from device 0, port 2
+11:14:43.275  dataplane : DEBUG   : Checking packet from device 0, port 2
+11:14:43.281  root      : INFO    : ** END TEST CASE bridging.ArpNdpReplyWithCloneTest
+11:14:43.281  root      : INFO    : ** END TEST CASE bridging.ArpNdpReplyWithCloneTest
+11:14:43.282  root      : INFO    : ** START TEST CASE bridging.BridgingTest
+11:14:43.282  root      : INFO    : ** START TEST CASE bridging.BridgingTest
+11:14:43.311  dataplane : DEBUG   : Sending 120 bytes to device 0, port 1
+11:14:43.311  dataplane : DEBUG   : Sending 120 bytes to device 0, port 1
+11:14:43.312  dataplane : DEBUG   : Sending 120 bytes to device 0, port 2
+11:14:43.312  dataplane : DEBUG   : Sending 120 bytes to device 0, port 2
+11:14:43.312  root      : DEBUG   : Checking for pkt on device 0, port 2
+11:14:43.312  root      : DEBUG   : Checking for pkt on device 0, port 2
+11:14:43.312  dataplane : DEBUG   : Grabbing packet
+11:14:43.312  dataplane : DEBUG   : Grabbing packet
+11:14:43.312  dataplane : DEBUG   : Out of packets on device 0, port 2
+11:14:43.312  dataplane : DEBUG   : Out of packets on device 0, port 2
+11:14:43.312  dataplane : DEBUG   : Did not find packet
+11:14:43.312  dataplane : DEBUG   : Did not find packet
+11:14:43.314  dataplane : DEBUG   : Pkt len 120 in on device 0, port 2
+11:14:43.314  dataplane : DEBUG   : Pkt len 120 in on device 0, port 2
+11:14:43.314  dataplane : DEBUG   : Grabbing packet
+11:14:43.314  dataplane : DEBUG   : Grabbing packet
+11:14:43.314  dataplane : DEBUG   : Checking packet from device 0, port 2
+11:14:43.314  dataplane : DEBUG   : Checking packet from device 0, port 2
+11:14:43.315  dataplane : DEBUG   : Pkt len 120 in on device 0, port 1
+11:14:43.315  dataplane : DEBUG   : Pkt len 120 in on device 0, port 1
+11:14:43.315  root      : DEBUG   : Checking for pkt on device 0, port 1
+11:14:43.315  root      : DEBUG   : Checking for pkt on device 0, port 1
+11:14:43.315  dataplane : DEBUG   : Grabbing packet
+11:14:43.315  dataplane : DEBUG   : Grabbing packet
+11:14:43.316  dataplane : DEBUG   : Checking packet from device 0, port 1
+11:14:43.316  dataplane : DEBUG   : Checking packet from device 0, port 1
+11:14:43.316  root      : DEBUG   : Checking for unexpected packets on all ports of device 0
+11:14:43.316  root      : DEBUG   : Checking for unexpected packets on all ports of device 0
+11:14:43.316  dataplane : DEBUG   : Grabbing packet
+11:14:43.316  dataplane : DEBUG   : Grabbing packet
+11:14:43.316  dataplane : DEBUG   : Out of packets on all ports
+11:14:43.316  dataplane : DEBUG   : Out of packets on all ports
+11:14:43.316  dataplane : DEBUG   : Did not find packet
+11:14:43.316  dataplane : DEBUG   : Did not find packet
+11:14:43.416  dataplane : DEBUG   : Poll timeout, no packet from device 0, port None
+11:14:43.416  dataplane : DEBUG   : Poll timeout, no packet from device 0, port None
+11:14:43.426  dataplane : DEBUG   : Sending 120 bytes to device 0, port 1
+11:14:43.426  dataplane : DEBUG   : Sending 120 bytes to device 0, port 1
+11:14:43.427  dataplane : DEBUG   : Sending 120 bytes to device 0, port 2
+11:14:43.427  dataplane : DEBUG   : Sending 120 bytes to device 0, port 2
+11:14:43.427  root      : DEBUG   : Checking for pkt on device 0, port 2
+11:14:43.427  root      : DEBUG   : Checking for pkt on device 0, port 2
+11:14:43.427  dataplane : DEBUG   : Grabbing packet
+11:14:43.427  dataplane : DEBUG   : Grabbing packet
+11:14:43.427  dataplane : DEBUG   : Out of packets on device 0, port 2
+11:14:43.427  dataplane : DEBUG   : Out of packets on device 0, port 2
+11:14:43.427  dataplane : DEBUG   : Did not find packet
+11:14:43.427  dataplane : DEBUG   : Did not find packet
+11:14:43.428  dataplane : DEBUG   : Pkt len 120 in on device 0, port 2
+11:14:43.428  dataplane : DEBUG   : Pkt len 120 in on device 0, port 2
+11:14:43.428  dataplane : DEBUG   : Grabbing packet
+11:14:43.428  dataplane : DEBUG   : Grabbing packet
+11:14:43.429  dataplane : DEBUG   : Checking packet from device 0, port 2
+11:14:43.429  dataplane : DEBUG   : Checking packet from device 0, port 2
+11:14:43.429  dataplane : DEBUG   : Pkt len 120 in on device 0, port 1
+11:14:43.429  dataplane : DEBUG   : Pkt len 120 in on device 0, port 1
+11:14:43.429  root      : DEBUG   : Checking for pkt on device 0, port 1
+11:14:43.429  root      : DEBUG   : Checking for pkt on device 0, port 1
+11:14:43.429  dataplane : DEBUG   : Grabbing packet
+11:14:43.429  dataplane : DEBUG   : Grabbing packet
+11:14:43.430  dataplane : DEBUG   : Checking packet from device 0, port 1
+11:14:43.430  dataplane : DEBUG   : Checking packet from device 0, port 1
+11:14:43.430  root      : DEBUG   : Checking for unexpected packets on all ports of device 0
+11:14:43.430  root      : DEBUG   : Checking for unexpected packets on all ports of device 0
+11:14:43.430  dataplane : DEBUG   : Grabbing packet
+11:14:43.430  dataplane : DEBUG   : Grabbing packet
+11:14:43.430  dataplane : DEBUG   : Out of packets on all ports
+11:14:43.430  dataplane : DEBUG   : Out of packets on all ports
+11:14:43.430  dataplane : DEBUG   : Did not find packet
+11:14:43.430  dataplane : DEBUG   : Did not find packet
+11:14:43.532  dataplane : DEBUG   : Poll timeout, no packet from device 0, port None
+11:14:43.532  dataplane : DEBUG   : Poll timeout, no packet from device 0, port None
+11:14:43.540  dataplane : DEBUG   : Sending 120 bytes to device 0, port 1
+11:14:43.540  dataplane : DEBUG   : Sending 120 bytes to device 0, port 1
+11:14:43.541  dataplane : DEBUG   : Sending 120 bytes to device 0, port 2
+11:14:43.541  dataplane : DEBUG   : Sending 120 bytes to device 0, port 2
+11:14:43.541  root      : DEBUG   : Checking for pkt on device 0, port 2
+11:14:43.541  root      : DEBUG   : Checking for pkt on device 0, port 2
+11:14:43.542  dataplane : DEBUG   : Grabbing packet
+11:14:43.542  dataplane : DEBUG   : Grabbing packet
+11:14:43.542  dataplane : DEBUG   : Out of packets on device 0, port 2
+11:14:43.542  dataplane : DEBUG   : Out of packets on device 0, port 2
+11:14:43.542  dataplane : DEBUG   : Did not find packet
+11:14:43.542  dataplane : DEBUG   : Did not find packet
+11:14:43.542  dataplane : DEBUG   : Pkt len 120 in on device 0, port 2
+11:14:43.542  dataplane : DEBUG   : Pkt len 120 in on device 0, port 2
+11:14:43.543  dataplane : DEBUG   : Grabbing packet
+11:14:43.543  dataplane : DEBUG   : Grabbing packet
+11:14:43.543  dataplane : DEBUG   : Checking packet from device 0, port 2
+11:14:43.543  dataplane : DEBUG   : Checking packet from device 0, port 2
+11:14:43.544  root      : DEBUG   : Checking for pkt on device 0, port 1
+11:14:43.544  root      : DEBUG   : Checking for pkt on device 0, port 1
+11:14:43.544  dataplane : DEBUG   : Pkt len 120 in on device 0, port 1
+11:14:43.544  dataplane : DEBUG   : Pkt len 120 in on device 0, port 1
+11:14:43.544  dataplane : DEBUG   : Grabbing packet
+11:14:43.544  dataplane : DEBUG   : Grabbing packet
+11:14:43.544  dataplane : DEBUG   : Checking packet from device 0, port 1
+11:14:43.544  dataplane : DEBUG   : Checking packet from device 0, port 1
+11:14:43.545  root      : DEBUG   : Checking for unexpected packets on all ports of device 0
+11:14:43.545  root      : DEBUG   : Checking for unexpected packets on all ports of device 0
+11:14:43.545  dataplane : DEBUG   : Grabbing packet
+11:14:43.545  dataplane : DEBUG   : Grabbing packet
+11:14:43.545  dataplane : DEBUG   : Out of packets on all ports
+11:14:43.545  dataplane : DEBUG   : Out of packets on all ports
+11:14:43.545  dataplane : DEBUG   : Did not find packet
+11:14:43.545  dataplane : DEBUG   : Did not find packet
+11:14:43.646  dataplane : DEBUG   : Poll timeout, no packet from device 0, port None
+11:14:43.646  dataplane : DEBUG   : Poll timeout, no packet from device 0, port None
+11:14:43.653  dataplane : DEBUG   : Sending 120 bytes to device 0, port 1
+11:14:43.653  dataplane : DEBUG   : Sending 120 bytes to device 0, port 1
+11:14:43.658  dataplane : DEBUG   : Pkt len 120 in on device 0, port 2
+11:14:43.658  dataplane : DEBUG   : Pkt len 120 in on device 0, port 2
+11:14:43.658  dataplane : DEBUG   : Sending 120 bytes to device 0, port 2
+11:14:43.658  dataplane : DEBUG   : Sending 120 bytes to device 0, port 2
+11:14:43.658  root      : DEBUG   : Checking for pkt on device 0, port 2
+11:14:43.658  root      : DEBUG   : Checking for pkt on device 0, port 2
+11:14:43.658  dataplane : DEBUG   : Grabbing packet
+11:14:43.658  dataplane : DEBUG   : Grabbing packet
+11:14:43.659  dataplane : DEBUG   : Checking packet from device 0, port 2
+11:14:43.659  dataplane : DEBUG   : Checking packet from device 0, port 2
+11:14:43.660  root      : DEBUG   : Checking for pkt on device 0, port 1
+11:14:43.660  root      : DEBUG   : Checking for pkt on device 0, port 1
+11:14:43.660  dataplane : DEBUG   : Grabbing packet
+11:14:43.660  dataplane : DEBUG   : Grabbing packet
+11:14:43.660  dataplane : DEBUG   : Out of packets on device 0, port 1
+11:14:43.660  dataplane : DEBUG   : Out of packets on device 0, port 1
+11:14:43.660  dataplane : DEBUG   : Did not find packet
+11:14:43.660  dataplane : DEBUG   : Did not find packet
+11:14:43.661  dataplane : DEBUG   : Pkt len 120 in on device 0, port 1
+11:14:43.661  dataplane : DEBUG   : Pkt len 120 in on device 0, port 1
+11:14:43.662  dataplane : DEBUG   : Grabbing packet
+11:14:43.662  dataplane : DEBUG   : Grabbing packet
+11:14:43.662  dataplane : DEBUG   : Checking packet from device 0, port 1
+11:14:43.662  dataplane : DEBUG   : Checking packet from device 0, port 1
+11:14:43.664  root      : DEBUG   : Checking for unexpected packets on all ports of device 0
+11:14:43.664  root      : DEBUG   : Checking for unexpected packets on all ports of device 0
+11:14:43.664  dataplane : DEBUG   : Grabbing packet
+11:14:43.664  dataplane : DEBUG   : Grabbing packet
+11:14:43.664  dataplane : DEBUG   : Out of packets on all ports
+11:14:43.664  dataplane : DEBUG   : Out of packets on all ports
+11:14:43.664  dataplane : DEBUG   : Did not find packet
+11:14:43.664  dataplane : DEBUG   : Did not find packet
+11:14:43.764  dataplane : DEBUG   : Poll timeout, no packet from device 0, port None
+11:14:43.764  dataplane : DEBUG   : Poll timeout, no packet from device 0, port None
+11:14:43.773  dataplane : DEBUG   : Sending 120 bytes to device 0, port 1
+11:14:43.773  dataplane : DEBUG   : Sending 120 bytes to device 0, port 1
+11:14:43.775  dataplane : DEBUG   : Pkt len 120 in on device 0, port 2
+11:14:43.775  dataplane : DEBUG   : Pkt len 120 in on device 0, port 2
+11:14:43.775  dataplane : DEBUG   : Sending 120 bytes to device 0, port 2
+11:14:43.775  dataplane : DEBUG   : Sending 120 bytes to device 0, port 2
+11:14:43.775  root      : DEBUG   : Checking for pkt on device 0, port 2
+11:14:43.775  root      : DEBUG   : Checking for pkt on device 0, port 2
+11:14:43.775  dataplane : DEBUG   : Grabbing packet
+11:14:43.775  dataplane : DEBUG   : Grabbing packet
+11:14:43.775  dataplane : DEBUG   : Checking packet from device 0, port 2
+11:14:43.775  dataplane : DEBUG   : Checking packet from device 0, port 2
+11:14:43.776  root      : DEBUG   : Checking for pkt on device 0, port 1
+11:14:43.776  root      : DEBUG   : Checking for pkt on device 0, port 1
+11:14:43.777  dataplane : DEBUG   : Grabbing packet
+11:14:43.777  dataplane : DEBUG   : Grabbing packet
+11:14:43.777  dataplane : DEBUG   : Out of packets on device 0, port 1
+11:14:43.777  dataplane : DEBUG   : Out of packets on device 0, port 1
+11:14:43.777  dataplane : DEBUG   : Did not find packet
+11:14:43.777  dataplane : DEBUG   : Did not find packet
+11:14:43.781  dataplane : DEBUG   : Pkt len 120 in on device 0, port 1
+11:14:43.781  dataplane : DEBUG   : Pkt len 120 in on device 0, port 1
+11:14:43.785  dataplane : DEBUG   : Grabbing packet
+11:14:43.785  dataplane : DEBUG   : Grabbing packet
+11:14:43.785  dataplane : DEBUG   : Checking packet from device 0, port 1
+11:14:43.785  dataplane : DEBUG   : Checking packet from device 0, port 1
+11:14:43.787  root      : DEBUG   : Checking for unexpected packets on all ports of device 0
+11:14:43.787  root      : DEBUG   : Checking for unexpected packets on all ports of device 0
+11:14:43.787  dataplane : DEBUG   : Grabbing packet
+11:14:43.787  dataplane : DEBUG   : Grabbing packet
+11:14:43.787  dataplane : DEBUG   : Out of packets on all ports
+11:14:43.787  dataplane : DEBUG   : Out of packets on all ports
+11:14:43.787  dataplane : DEBUG   : Did not find packet
+11:14:43.787  dataplane : DEBUG   : Did not find packet
+11:14:43.888  dataplane : DEBUG   : Poll timeout, no packet from device 0, port None
+11:14:43.888  dataplane : DEBUG   : Poll timeout, no packet from device 0, port None
+11:14:43.893  dataplane : DEBUG   : Sending 120 bytes to device 0, port 1
+11:14:43.893  dataplane : DEBUG   : Sending 120 bytes to device 0, port 1
+11:14:43.894  dataplane : DEBUG   : Sending 120 bytes to device 0, port 2
+11:14:43.894  dataplane : DEBUG   : Sending 120 bytes to device 0, port 2
+11:14:43.894  root      : DEBUG   : Checking for pkt on device 0, port 2
+11:14:43.894  root      : DEBUG   : Checking for pkt on device 0, port 2
+11:14:43.894  dataplane : DEBUG   : Grabbing packet
+11:14:43.894  dataplane : DEBUG   : Grabbing packet
+11:14:43.895  dataplane : DEBUG   : Out of packets on device 0, port 2
+11:14:43.895  dataplane : DEBUG   : Out of packets on device 0, port 2
+11:14:43.895  dataplane : DEBUG   : Did not find packet
+11:14:43.895  dataplane : DEBUG   : Did not find packet
+11:14:43.895  dataplane : DEBUG   : Pkt len 120 in on device 0, port 2
+11:14:43.895  dataplane : DEBUG   : Pkt len 120 in on device 0, port 2
+11:14:43.896  dataplane : DEBUG   : Grabbing packet
+11:14:43.896  dataplane : DEBUG   : Grabbing packet
+11:14:43.896  dataplane : DEBUG   : Checking packet from device 0, port 2
+11:14:43.896  dataplane : DEBUG   : Checking packet from device 0, port 2
+11:14:43.897  root      : DEBUG   : Checking for pkt on device 0, port 1
+11:14:43.897  root      : DEBUG   : Checking for pkt on device 0, port 1
+11:14:43.897  dataplane : DEBUG   : Pkt len 120 in on device 0, port 1
+11:14:43.897  dataplane : DEBUG   : Pkt len 120 in on device 0, port 1
+11:14:43.897  dataplane : DEBUG   : Grabbing packet
+11:14:43.897  dataplane : DEBUG   : Grabbing packet
+11:14:43.897  dataplane : DEBUG   : Checking packet from device 0, port 1
+11:14:43.897  dataplane : DEBUG   : Checking packet from device 0, port 1
+11:14:43.898  root      : DEBUG   : Checking for unexpected packets on all ports of device 0
+11:14:43.898  root      : DEBUG   : Checking for unexpected packets on all ports of device 0
+11:14:43.898  dataplane : DEBUG   : Grabbing packet
+11:14:43.898  dataplane : DEBUG   : Grabbing packet
+11:14:43.898  dataplane : DEBUG   : Out of packets on all ports
+11:14:43.898  dataplane : DEBUG   : Out of packets on all ports
+11:14:43.898  dataplane : DEBUG   : Did not find packet
+11:14:43.898  dataplane : DEBUG   : Did not find packet
+11:14:43.998  dataplane : DEBUG   : Poll timeout, no packet from device 0, port None
+11:14:43.998  dataplane : DEBUG   : Poll timeout, no packet from device 0, port None
+11:14:44.005  root      : INFO    : ** END TEST CASE bridging.BridgingTest
+11:14:44.005  root      : INFO    : ** END TEST CASE bridging.BridgingTest
+11:14:44.006  root      : INFO    : *** TEST RUN END  : Tue Apr  6 11:14:44 2021
+11:14:44.006  root      : INFO    : *** TEST RUN END  : Tue Apr  6 11:14:44 2021
+11:14:44.006  dataplane : INFO    : Thread exit
+11:14:44.006  dataplane : INFO    : Thread exit
