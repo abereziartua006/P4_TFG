@@ -1,0 +1,138 @@
+{
+  "devices": {
+    "device:switch1": {
+      "basic": {
+        "managementAddress": "grpc://mininet:50001?device_id=1",
+        "driver": "stratum-bmv2",
+        "pipeconf": "org.onosproject.ngsdn-tutorial",
+        "locType": "grid",
+        "gridX": 800,
+        "gridY": 600
+      },
+      "fabricDeviceConfig": {
+        "myStationMac": "00:aa:00:00:00:01",
+        "mySid": "3:101:2::",
+        "isSpine": true
+      }
+    },
+    "device:switch2": {
+      "basic": {
+        "managementAddress": "grpc://mininet:50002?device_id=1",
+        "driver": "stratum-bmv2",
+        "pipeconf": "org.onosproject.ngsdn-tutorial",
+        "locType": "grid",
+        "gridX": 600,
+        "gridY": 400
+      },
+      "fabricDeviceConfig": {
+        "myStationMac": "00:aa:00:00:00:02",
+        "mySid": "3:101:3::",
+        "isSpine": true
+      }
+    },
+    "device:switch3": {
+      "basic": {
+        "managementAddress": "grpc://mininet:50003?device_id=1",
+        "driver": "stratum-bmv2",
+        "pipeconf": "org.onosproject.ngsdn-tutorial",
+        "locType": "grid",
+        "gridX": 400,
+        "gridY": 400
+      },
+      "fabricDeviceConfig": {
+        "myStationMac": "00:aa:00:00:00:03",
+        "mySid": "3:101:4::",
+        "isSpine": true
+      }
+    },
+    "device:switch4": {
+      "basic": {
+        "managementAddress": "grpc://mininet:50004?device_id=1",
+        "driver": "stratum-bmv2",
+        "pipeconf": "org.onosproject.ngsdn-tutorial",
+        "locType": "grid",
+        "gridX": 600,
+        "gridY": 600
+      },
+      "fabricDeviceConfig": {
+        "myStationMac": "00:aa:00:00:00:04",
+        "mySid": "3:101:5::",
+        "isSpine": true
+      }
+    },
+    "device:switch5": {
+      "basic": {
+        "managementAddress": "grpc://mininet:50005?device_id=1",
+        "driver": "stratum-bmv2",
+        "pipeconf": "org.onosproject.ngsdn-tutorial",
+        "locType": "grid",
+        "gridX": 600,
+        "gridY": 800
+      },
+      "fabricDeviceConfig": {
+        "myStationMac": "00:aa:00:00:00:05",
+        "mySid": "3:101:6::",
+        "isSpine": true
+      }
+    },
+    "device:switch6": {
+      "basic": {
+        "managementAddress": "grpc://mininet:50006?device_id=1",
+        "driver": "stratum-bmv2",
+        "pipeconf": "org.onosproject.ngsdn-tutorial",
+        "locType": "grid",
+        "gridX": 200,
+        "gridY": 600
+      },
+      "fabricDeviceConfig": {
+        "myStationMac": "00:aa:00:00:00:06",
+        "mySid": "3:101:7::",
+        "isSpine": true
+      }
+    }
+  },
+  "ports": {
+    "device:switch1/4": {
+      "interfaces": [
+        {
+          "name": "switch1-4",
+          "ips": ["2001:1:1::ff/64"]
+        }
+      ]
+    },
+    "device:switch6/3": {
+      "interfaces": [
+        {
+          "name": "switch6-3",
+          "ips": ["2001:1:1::ff/64"]
+        }
+      ]
+    }
+  },
+  "hosts": {
+    "00:00:00:00:00:1A/None": {
+      "basic": {
+        "name": "hostA",
+        "locType": "grid",
+        "gridX": 900,
+        "gridY": 600
+      }
+    },
+    "00:00:00:00:00:1B/None": {
+      "basic": {
+        "name": "hostB",
+        "locType": "grid",
+        "gridX": 150,
+        "gridY": 600
+      }
+    },
+    "00:00:00:00:00:1C/None": {
+      "basic": {
+        "name": "hostC",
+        "locType": "grid",
+        "gridX": 600,
+        "gridY": 900
+      }
+    }
+  }
+}
