@@ -1,0 +1,17 @@
+#!/bin/bash
+# -*- ENCODING: UTF-8 -*-
+
+util/mn-cmd ha mosquitto_pub -h 2001:1:1::b -t test -m "5"
+sleep 1s
+util/mn-cmd ha mosquitto_pub -h 2001:1:1::b -t test -m "11"
+sleep 1s
+util/mn-cmd ha mosquitto_pub -h 2001:1:1::b -t test -m "2"
+sleep 1s
+util/mn-cmd ha mosquitto_pub -h 2001:1:1::b -t test -m "3"
+sleep 1s
+util/mn-cmd ha mosquitto_pub -h 2001:1:1::b -t test -m "6"
+sleep 1s
+util/mn-cmd ha mosquitto_pub -h 2001:1:1::b -t test -m "15"
+sleep 1s
+
+exit
